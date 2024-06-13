@@ -28,7 +28,7 @@
                                 <option>Mahasiswa</option>
                                 <option>Pembimbing Lapangan</option>
                             </select>
-                            
+
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
@@ -69,12 +69,18 @@
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Masuk') }}
                                     </button>
+                                    <h6 style="text-align: center; margin-top: 20px;">jika anda pembimbing lapangan silahkan klik 
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                    {{ __('Daftar') }}
+                                </a>
+                                    </h6>
 
                                     <!-- @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                                 @endif -->
+
                                 </div>
                             </div>
                         </form>
